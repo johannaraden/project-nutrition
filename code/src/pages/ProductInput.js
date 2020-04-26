@@ -1,5 +1,6 @@
 import React from 'react'
 import { BarcodeScanner } from "components/BarcodeScanner"
+import { Header } from '../lib/Header'
 
 
 const onDetected = (code) => {
@@ -16,6 +17,7 @@ export const ProductInput = () => {
 
   return (
     <section>
+        <Header />
         <label>
             {" "}
             Test codes here:{" "}

@@ -1,24 +1,36 @@
-import React from "react";
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import { reducer } from '/reducers/reducer'
-import { store } from 'reducers/reducer' 
-import { combineReducers, configureStore } from "@reduxjs/toolkit";
+import React from "react"
+import { Provider } from "react-redux"
+import { configureStore, combineReducers } from "@reduxjs/toolkit"
+import { products } from "reducers/reducer"
+import { ProductInput } from "./pages/ProductInput"
+import {Start } from "pages/Start"
+import {BrowserRouter, Switch, Route} from "react-router-dom"
+import { ProductInfo } from "pages/ProductInfo"
+// import { Product } from "components/Product"
 
-const reducer = combineReducers({ store:reducer })
-const store = configureStore({ reducer })
 
+const reducer = combineReducers({
+  products: products.reducer
+})
+
+export const store = configureStore({ reducer })
 
 export const App = () => {
-
   return (
-    <Provider>
+    <Provider store={store}>
       <BrowserRouter>
         <Switch>
-          <Route path="/" exact></Route>
-          <Route path="/productinput" exact></Route>
-          <Route path="/productinfo" exact></Route>
+          <Route path="/" exact>
+            <Start />
+          </Route>
+          <Route path="/productinput">
+            <ProductInput />
+          </Route>
+          <Route path="/productinfo">
+            <ProductInfo />
+          </Route>
         </Switch>
       </BrowserRouter>
     </Provider>
-  );
-};
+  )
+}

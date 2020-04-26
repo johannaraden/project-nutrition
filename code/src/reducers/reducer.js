@@ -1,18 +1,24 @@
-import React from 'react'
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from "@reduxjs/toolkit"
 
-const initialState = { products, vegan: false, vegetarian: false }
-
-export const store = createSlice({
-    name: 'store',
-    initialState,
-    reducers: {
-        // choose method
-        // input product
-        // get info
-        // start over 
-
+export const products = createSlice({
+  name: "products",
+  initialState: {
+    product: []
+  },
+  reducers: {
+    setProduct: (state, action) => {
+      state.product = action.payload
     }
- }
-)
- 
+  }
+})
+
+export const fetchProduct = barcode => {
+  return dispatch => {
+    fetch(`https://world.openfoodfacts.org/api/v0/product/${barcode}.json`)
+      .then(res => res.json())
+      .then(json => {
+        dispatch(products.actions.setProduct(json))
+      })
+  }
+}
+

@@ -10,8 +10,6 @@ display: flex;
 justify-content: center;
 `
 
-
-
 export const Header = () => {
     return (
       <HeaderContainer>

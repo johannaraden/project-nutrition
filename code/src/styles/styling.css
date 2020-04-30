@@ -1,0 +1,6 @@
+.inputButton, .scanButton {
+    padding: 2em;
+    cursor: pointer;
+    width: 30em;
+    margin: 1em auto;
+}

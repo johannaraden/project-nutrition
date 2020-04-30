@@ -14,7 +14,7 @@ const Arrow = styled.button`
 export const BackArrow = () => {
     return (
       <Arrow>
-         <Link to={'/'} style={{ textDecoration: 'none'}}>⬅</Link> 
+ 
       </Arrow>
     )
   }

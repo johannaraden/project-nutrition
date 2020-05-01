@@ -13,18 +13,9 @@ const InfoText = styled.h1`
 export const ProductCard = () => {
   const scan = useSelector(state => state.products.product)
   let formatIngredients = []
-  let formatNutritients = []
 
   if (!scan) return null
 
-  if (scan.product && scan.product.generic_name) {
-    formatNutritients = scan.product.nutrient_levels_tags.map(ingredient =>
-      ingredient
-        .replace(/\w+:/, " ")
-        .replace(/-/gi, " ")
-        .replace(":", " ")
-    ) 
-  }
 
   if (scan.product && scan.product.ingredients_analysis_tags) {
     formatIngredients = scan.product.ingredients_analysis_tags.map(ingredient =>
@@ -41,7 +32,7 @@ export const ProductCard = () => {
       {!scan.product && (
           
         <InfoText>
-          <h1>Hold the barcode to the camera to scan it for information</h1>
+          Hold the barcode to the camera to scan it for information
         </InfoText>
       )}
       <ScanBarcode />

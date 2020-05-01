@@ -11,7 +11,6 @@ color: #FDFFFC;
 display: flex;
 justify-content: center;
 flex-direction: column;
-border: 2px solid black;
 width: 80%;
 margin: auto;
 margin-bottom: 3em;

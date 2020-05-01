@@ -6,9 +6,16 @@ import styled from "styled-components"
 import { Button } from 'lib/Button'
 
 
-const Wrapper = styled.section ``
+const Wrapper = styled.section `
+display: flex;
+justify-content: center;
+`
 
-const CameraContainer = styled.div ``
+const CameraContainer = styled.div `
+width: 40em;
+overflow: hidden;
+border-radius: 25px;
+`
 
 export const ScanBarcode = () => {
   const [showScanner, setShowScanner] = useState(false)

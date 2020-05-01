@@ -5,9 +5,18 @@ import { ScanBarcode } from "components/ScanBarcode"
 import styled from "styled-components"
 import './style.css'
 
+
 const InfoText = styled.h1`
-  margin-bottom: 20px;
+  margin: auto;
   text-align: center;
+`
+
+const ButtonContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
 `
 
 export const ProductCard = () => {
@@ -35,9 +44,10 @@ export const ProductCard = () => {
           Hold the barcode to the camera to scan it for information
         </InfoText>
       )}
-      <ScanBarcode />
-      <TypeInput />
-
+      <ButtonContainer>
+        <ScanBarcode />
+        <TypeInput />
+      </ButtonContainer>
       {scan.product && (
         <div className='card'>
           <ul className='product'>

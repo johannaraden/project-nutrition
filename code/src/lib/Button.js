@@ -13,4 +13,5 @@ width: 250px;
 height: 150px;
 color: #FFF;
 font-weight: bold;
+font-size: 1.2em;
 `

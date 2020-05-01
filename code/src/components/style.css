@@ -2,7 +2,23 @@
 .List {
     color: black;
     padding: 14px 26px 14px 13.2px;
-    background-color: pink;
+    background-color: white;
     border-radius: 25px;
     text-align: center;
     }
+
+
+.scanner {
+     border-radius: 25px;
+     position: absolute;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.highlight-info {
+    text-align: center;
+}

@@ -2,6 +2,17 @@ import React, { useState } from "react"
 import { fetchProduct } from "reducers/products"
 import { useDispatch } from "react-redux"
 import { Button } from "lib/Button"
+import styled from "styled-components"
+
+const ManualSection = styled.section`
+display: flex;
+flex-direction: column;
+justify-content: center;
+`
+
+const InputField = styled.input`
+margin-left: 3em;
+`
 
 export const TypeInput = () => {
   const [showinputForm, setShowInputForm] = useState(false)
@@ -15,7 +26,8 @@ export const TypeInput = () => {
   }
 
   return (
-    <>
+    <ManualSection>
+
       {!showinputForm && (
         <Button type='Button' onClick={() => setShowInputForm(true)}>
           Manual search
@@ -31,16 +43,17 @@ export const TypeInput = () => {
       {showinputForm && (
         <form onSubmit={handleSubmit}>
           <div>
-            <input
-              type='text'
-              placeholder='Enter product code'
-              value={code}
-              onChange={e => setCode(e.target.value)}
-            />
+            <InputField
+            type='text'
+            placeholder='Enter product code'
+            value={code}
+            onChange={e => setCode(e.target.value)}
+            >
+            </InputField>
             <button type='submit'>Search</button>
           </div>
         </form>
       )}
-    </>
+    </ManualSection>
   )
 }

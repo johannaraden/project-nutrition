@@ -5,9 +5,9 @@ import { Button } from "lib/Button"
 import styled from "styled-components"
 
 const ManualSection = styled.section`
-display: flex;
-flex-direction: column;
-justify-content: center;
+@media (max-width: 768px) {
+margin: auto;  
+}
 `
 
 const InputField = styled.input`

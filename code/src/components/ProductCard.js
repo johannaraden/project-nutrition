@@ -38,12 +38,10 @@ export const ProductCard = () => {
   return (
   
     <Container>
-      {!scan.product && (
+      {/* {!scan.product && (
           
-        <InfoText>
-          Hold the barcode to the camera to scan it for information
-        </InfoText>
-      )}
+        
+      )} */}
       <ButtonContainer>
         <ScanBarcode />
         <TypeInput />

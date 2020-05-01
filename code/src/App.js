@@ -8,11 +8,16 @@ import { Header } from 'lib/Header'
 
 const Section = style.section`
 color: #FDFFFC;
-position: relative;
 display: flex;
 justify-content: center;
-// align-items: center;
 flex-direction: column;
+border: 2px solid black;
+width: 80%;
+margin: auto;
+margin-bottom: 3em;
+@media (min-width: 768px) {
+  flex-direction: row;
+}
 `
 
 const reducer = combineReducers({

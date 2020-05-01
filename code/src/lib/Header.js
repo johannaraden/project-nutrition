@@ -16,8 +16,20 @@ const Headline = styled.h1`
 font-size: 2em;
 `
 
+const InfoText = styled.h1`
+  margin: auto;
+  text-align: center;
+  color: white;
+`
+
 export const Header = () => { 
     return ( 
+        <>
     <HeaderContainer> 
         <Headline>VeggieChecker</Headline> 
-    </HeaderContainer> ) }
+    </HeaderContainer> 
+    <InfoText>
+    Hold the barcode to the camera to scan it for information
+  </InfoText>
+  </>
+    ) }

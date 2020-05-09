@@ -1,12 +1,10 @@
 # Project Nutrition
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+For this project we built a site that checks if a product is vegan and/or vegetarian. This is done by using the scanner or manually typing a barcode into an input field. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+We started with sketching to get an understanding of the design, the different components and which ones could be reused. We used Open World Facts API, thunk, Quagga, React Redux and style components to built our project. We used reusable components for our buttons. 
 
 ## View it live
 

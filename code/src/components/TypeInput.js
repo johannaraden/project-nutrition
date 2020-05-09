@@ -1,17 +1,17 @@
-import React, { useState } from "react"
-import { fetchProduct } from "reducers/products"
-import { useDispatch } from "react-redux"
-import { Button } from "lib/Button"
-import styled from "styled-components"
+import React, { useState } from 'react'
+import { fetchProduct } from 'reducers/products'
+import { useDispatch } from 'react-redux'
+import { Button } from 'lib/Button'
+import styled from 'styled-components'
 
 const ManualSection = styled.section`
-@media (max-width: 768px) {
-margin: auto;  
-}
+  @media (max-width: 768px) {
+  margin: auto;  
+  }
 `
 
 const InputField = styled.input`
-margin-left: 3em;
+  margin-left: 3em;
 `
 
 export const TypeInput = () => {

@@ -1,22 +1,18 @@
 import React from 'react'
-import { useSelector } from "react-redux"
-import { TypeInput } from "components/TypeInput"
-import { ScanBarcode } from "components/ScanBarcode"
-import styled from "styled-components"
+import { useSelector } from 'react-redux'
+import styled from 'styled-components'
 import './style.css'
 
+const Container = styled.section`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`
 
 const InfoText = styled.h1`
   margin: auto;
   text-align: center;
-`
-
-const ButtonContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  @media (min-width: 768px) {
-    flex-direction: row;
-  }
 `
 
 export const ProductCard = () => {
@@ -36,16 +32,8 @@ export const ProductCard = () => {
   }
 
   return (
-  
+
     <Container>
-      {/* {!scan.product && (
-          
-        
-      )} */}
-      <ButtonContainer>
-        <ScanBarcode />
-        <TypeInput />
-      </ButtonContainer>
       {scan.product && (
         <div className='card'>
           <ul className='product'>
@@ -67,10 +55,3 @@ export const ProductCard = () => {
     </Container>
   )
 }
-
-const Container = styled.section`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-`

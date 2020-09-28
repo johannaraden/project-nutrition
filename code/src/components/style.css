@@ -16,9 +16,13 @@
     margin-top: 2em;
 }
 
+.scanner canvas {
+    width: 100%;
+}
+
 .scanner video {
      border-radius: 25px;
-     width: 50%;
+     width: 70%;
      align-content: center;
      position: absolute;
 }

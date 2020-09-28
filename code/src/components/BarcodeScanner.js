@@ -1,5 +1,15 @@
 import React, { useRef, useState, useLayoutEffect } from 'react';
+import styled from 'styled-components'
+import './style.css'
 import Quagga from 'quagga';
+
+
+const CameraDiv = styled.div`
+  color: black;
+  width: 80%;
+  text-align: center;
+  font-size: 1.5em;
+`
 
 export const BarcodeScanner = ({ className, onDetected }) => {
   const [initializing, setInitializing] = useState(true);
@@ -38,7 +48,7 @@ export const BarcodeScanner = ({ className, onDetected }) => {
 
   return (
     <>
-      {initializing && <div>Starting camera...</div>}
+      {initializing && <CameraDiv>Starting camera...</CameraDiv>}
       <div ref={cameraDivRef} className={className} />
     </>
   );

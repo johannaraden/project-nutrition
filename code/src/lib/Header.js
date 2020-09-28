@@ -2,34 +2,43 @@ import React from 'react'
 import styled from 'styled-components'
 
 const HeaderContainer = styled.section`
-  background-color: lightblue;
   width: 100%;
-  padding: 2em;
+  padding-top: 2em;
   display: flex;
-  margin-bottom: 3em;
-  color: #fff;
+  margin-bottom: 2em;
+  color: #40ad5d;
   justify-content: center;
-  background-image: url("https://previews.123rf.com/images/jpkirakun/jpkirakun1806/jpkirakun180600207/103664696-backdrop-and-texture-of-green-leaves-natural-wall-.jpg");
 `
 
 const Headline = styled.h1`
   font-size: 2em;
+  transform: rotate(-2deg);
+  margin:15px;
+  width: 50%;
+  text-align: center; 
+  padding: 10px 20px;
+  background:#EFDECD;
+  border:1px solid #222;
+  box-shadow: 3px 3px 0 #222;
 `
 
 const InfoText = styled.h1`
+  width: 70%;
   margin: auto;
   text-align: center;
-  color: white;
 `
 
 export const Header = () => { 
     return ( 
       <>
       <HeaderContainer> 
-        <Headline>VeggieChecker</Headline> 
       </HeaderContainer> 
-      <InfoText>
-        Hold the barcode to the camera to scan it for information
+      <InfoText style={{color:"green", fontSize: 62, transform: "rotate(-2deg)"}}>VEGGIECHECKER</InfoText> 
+      <InfoText style={{color:"white", textShadow: "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000", marginTop:"-.2em", fontSize: 75, transform: "rotate(-2deg)"}}>
+        Want veggie? 
+      </InfoText>
+      <InfoText style={{color:"green", marginTop:"-.2em", fontSize: 42, transform: "rotate(-2deg)"}}>
+        Research your product!
       </InfoText>
       </>
   ) 

@@ -3,11 +3,22 @@ import { createSlice } from '@reduxjs/toolkit'
 export const products = createSlice({
   name: "products",
   initialState: {
-    product: []
+    product: [],
+    showButtons: true,
+    // showScanner: true,
+    // showManual: true
   },
   reducers: {
     setProduct: (state, action) => {
-    state.product = action.payload
+      state.product = action.payload
+    },
+    hideButtons: (state) => {
+      state.showButtons = false
+    },
+    restart: (state) => {
+      console.log("now restarted")
+      state.showButtons = true
+      
     }
   }
 })

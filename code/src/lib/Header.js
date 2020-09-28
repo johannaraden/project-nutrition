@@ -10,18 +10,6 @@ const HeaderContainer = styled.section`
   justify-content: center;
 `
 
-const Headline = styled.h1`
-  font-size: 2em;
-  transform: rotate(-2deg);
-  margin:15px;
-  width: 50%;
-  text-align: center; 
-  padding: 10px 20px;
-  background:#EFDECD;
-  border:1px solid #222;
-  box-shadow: 3px 3px 0 #222;
-`
-
 const InfoText = styled.h1`
   width: 70%;
   margin: auto;

@@ -59,7 +59,7 @@ export const ScanBarcode = () => {
           />
           <Instructions>
             <p>Scan your product's barcode.</p>
-            <p>Find out if your product is veggie/vegan🌿</p>
+            <p>Find out if your product is veggie/vegan<span role="img" aria-label="herb-leaf">🌿</span></p>
           </Instructions>
         </CameraContainer>
       )} 

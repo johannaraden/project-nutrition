@@ -30,6 +30,12 @@ const InputField = styled.input`
 const Div = styled.div`
   margin: 3em 2em 2em 2em;
 `
+const SearchButton = styled.button`
+  :hover {
+    cursor: pointer;
+  }
+`
+
 
 export const TypeInput = () => {
   const [showinputForm, setShowInputForm] = useState(false)
@@ -40,6 +46,7 @@ export const TypeInput = () => {
 // Function to dispatch the api fetch of product
   const handleSubmit = e => {
     e.preventDefault()
+    setShowInputForm(false)
     dispatch(fetchProduct(code))
     setCode("")
   }
@@ -70,7 +77,8 @@ export const TypeInput = () => {
         <InputForm onSubmit={handleSubmit}>
           <Close onClick={close}>Close</Close>
           <Div>
-            <Instructions style={{color:"black"}}>Please type the barcode number to search information about your product</Instructions>
+            {/* <Instructions>3017620422003</Instructions> */}
+            <Instructions>Please type the barcode number of your product to search information about your product</Instructions>
             <InputField
               type='text'
               placeholder='Enter product code'
@@ -78,7 +86,7 @@ export const TypeInput = () => {
               onChange={e => setCode(e.target.value)}
             >
             </InputField>
-            <button type='submit'>Search</button>
+            <SearchButton type='submit'>Search</SearchButton>
           </Div>
         </InputForm>
       )}

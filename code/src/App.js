@@ -17,6 +17,7 @@ const Section = styled.section`
   width: 80%;
   margin: auto;
   margin-bottom: 3em;
+  font-family: 'Open Sans', sans-serif;
   @media (min-width: 768px) {
   flex-direction: row;
   }
@@ -63,8 +64,8 @@ export const App = (scanner) => {
             }
             <TypeInput />
           </ButtonContainer>
-          <ProductCard />
         </Section>
+        <ProductCard />
       </Div>
    </Provider>
   )

@@ -13,6 +13,7 @@ const HeaderContainer = styled.section`
 const InfoText = styled.h1`
   width: 70%;
   margin: auto;
+  font-family: 'Inconsolata', monospace;
   text-align: center;
 `
 
@@ -21,11 +22,11 @@ export const Header = () => {
       <>
       <HeaderContainer> 
       </HeaderContainer> 
-      <InfoText style={{color:"green", fontSize: 62, transform: "rotate(-2deg)"}}>VEGGIECHECKER</InfoText> 
-      <InfoText style={{color:"white", textShadow: "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000", marginTop:"-.2em", fontSize: 75, transform: "rotate(-2deg)"}}>
+      <InfoText style={{color:"#2BAB56", fontSize: 74, transform: "rotate(-2deg)"}}>VEGGIECHECKER</InfoText> 
+      <InfoText style={{color:"white", textShadow: "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000", marginTop:"-.2em", fontSize: 80, transform: "rotate(-2deg)"}}>
         Want veggie? 
       </InfoText>
-      <InfoText style={{color:"green", marginTop:"-.2em", fontSize: 42, transform: "rotate(-2deg)"}}>
+      <InfoText style={{color:"#2BAB56", marginTop:"-.2em", fontSize: 44, transform: "rotate(-2deg)"}}>
         Research your product!
       </InfoText>
       </>

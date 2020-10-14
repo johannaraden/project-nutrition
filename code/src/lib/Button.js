@@ -13,10 +13,12 @@ export const Button = styled.button`
   font-weight: bold;
   font-size: 1.2em;
   border:solid 2px #41403E;
-  transition:all .5s ease;
+  transition:all .2s ease;
   border:1px solid #222;
   box-shadow:3px 3px 0 #222;
+  font-family: 'Open Sans', sans-serif;
   :hover {
-    box-shadow:2px 8px 4px -6px;
+    background-color: #C6B271;
+    text-decoration: underline;
   }
 `

@@ -5,8 +5,6 @@ export const products = createSlice({
   initialState: {
     product: [],
     showButtons: true,
-    // showScanner: true,
-    // showManual: true
   },
   reducers: {
     setProduct: (state, action) => {
@@ -18,7 +16,7 @@ export const products = createSlice({
     restart: (state) => {
       console.log("now restarted")
       state.showButtons = true
-      
+      state.product = 0
     }
   }
 })

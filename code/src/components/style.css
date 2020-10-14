@@ -1,12 +1,34 @@
+/* Search result - product card */
 
-.List {
+.product {
+    margin: 1em;
+    padding: 0;
+}
+
+.not-found {
+  margin: 1em auto;
+  color: black;
+}
+
+
+.non, .unknown, .green {
     color: black;
     padding: 14px 26px 14px 13.2px;
-    background-color: white;
     border-radius: 25px;
     text-align: center;
-    }
+}
 
+.green {
+  background-color:#3bce6c;
+}
+
+.non {
+  background-color:#f15f5f;
+}
+
+.unknown {
+  background-color: #ecca3a;
+}
 
 .scanner {
     width: 100%;
@@ -33,11 +55,9 @@
     justify-content: center;
 }
 
-.highlight-info {
-    text-align: center;
+.table {
+  text-align: center;
 }
-
-
 
 @media (max-width: 768px) {
     .scanner video {

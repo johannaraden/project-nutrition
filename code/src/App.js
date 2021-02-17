@@ -30,17 +30,25 @@ const ButtonContainer = styled.div`
   @media (min-width: 768px) {
     flex-direction: row;
   }
+  @media (max-width: 768px) {
+    transform: rotate(-1deg);
+  }
 `
 
 const Div = styled.div`
   width: 850px;
-  border-width: 3px 4px 3px 5px;
-  border-radius:95% 4% 92% 5%/4% 95% 6% 95%;
+  border-width: 2px 3px 2px 4px;
+  border-radius: 92% 8% 92% 8%/6% 92% 10% 94%;
   transform: rotate(2deg);
   margin: auto;
   margin-top: 3em;
   background:#fff;
   border: solid black;
+  @media (max-width: 768px) {
+    width: 90%;
+    transform: rotate(1deg);
+    border-radius: 4% 6% 64% 8%/9% 55% 4% 15%;
+  }
 `
 
 const reducer = combineReducers({

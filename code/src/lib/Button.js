@@ -9,7 +9,7 @@ export const Button = styled.button`
   margin: 2em;
   width: 250px;
   height: 150px;
-  color: #FFF;
+  color: #FFFF;
   font-weight: bold;
   font-size: 1.2em;
   border:solid 2px #41403E;
@@ -21,4 +21,7 @@ export const Button = styled.button`
     background-color: #C6B271;
     text-decoration: underline;
   }
+  // @media (max-width: 768px) {
+  //   transform: rotate(-2deg);
+  // }
 `

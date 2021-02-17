@@ -89,13 +89,18 @@ export const ProductCard = () => {
     )
   }
 
+  const redirect = () => {
+    window.location =  
+                `https://world.openfoodfacts.org/product/${scan.code}/`
+  }
+
   return (
 
     <Container>
       {scan.product && (
         <Card>
             <HighlightInfo>Dietary information:</HighlightInfo>
-      <ProductName>Found product: {scan.product.product_name}, {scan.product.brands}</ProductName>
+        <ProductName>{scan.product.product_name}, {scan.product.brands}</ProductName>
             <Grid>
               <Headline>Vegan</Headline>
               <Headline>Vegetarian</Headline>
@@ -104,6 +109,9 @@ export const ProductCard = () => {
                 <Result className={ingredient.includes("non") ? "non" : ingredient.includes("unknown") ? "unknown" : "green" } key={index}>{ingredient}</Result>
               ))}
             </Grid>
+            <Close onClick={redirect} style={{fontSize:'1.2em'}}> 
+              Read more
+            </Close> 
             <Close onClick={restart} style={{fontSize:'1.2em'}}>Restart</Close>
         </Card>
       )}

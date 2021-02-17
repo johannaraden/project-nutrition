@@ -7,9 +7,9 @@ export const Close = styled.button`
   padding: .4em .6em;
   background-color: transparent;
   cursor: pointer;
-  border: solid;
+  border: 2px solid;
   font-family: 'Open Sans', sans-serif;
   :hover {
-    border: solid #C6B271;
+    border: 2px solid #C6B271;
   }
 `

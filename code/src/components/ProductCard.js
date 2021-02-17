@@ -90,8 +90,8 @@ export const ProductCard = () => {
   }
 
   const redirect = () => {
-    window.location =  
-                `https://world.openfoodfacts.org/product/${scan.code}/`
+    window.open(`https://world.openfoodfacts.org/product/${scan.code}/`)  
+                
   }
 
   return (
